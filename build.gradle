@@ -1,0 +1,62 @@
+buildscript {
+    repositories {
+        google()  // Ensure using https://maven.google.com
+        mavenCentral()  // Use mavenCentral instead of jcenter
+
+        // Add the OneSignal repository
+        maven {
+            url 'https://plugins.gradle.org/m2/'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.1'  // Update to the latest stable version
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.13.4'  // Update to version 0.13.4
+    }
+}
+
+allprojects {
+    repositories {
+//        google()
+//        mavenCentral()
+
+        // Add the OneSignal repository
+//        maven {
+//            url 'https://plugins.gradle.org/m2/'
+//        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+//plugins {
+//    id 'com.android.application' version '7.4.0'
+//}
+//
+//android {
+//    compileSdkVersion 33
+//    defaultConfig {
+//        applicationId "your.package.name"
+//        minSdkVersion 16
+//        targetSdkVersion 33
+//        versionCode 1
+//        versionName "1.0"
+//    }
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//
+//
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+//
+//                    'proguard-rules.pro'
+//        }
+//    }
+//}
+//
+//dependencies {
+//    implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
+//    // other dependencies
+//}
